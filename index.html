@@ -16,12 +16,12 @@
   nav .brand span{color:var(--electric)}
   nav .tag{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
 
-  .cover{padding:74px 0 30px;text-align:center;background:radial-gradient(800px 420px at 50% -5%, rgba(108,92,231,.32), transparent 70%)}
+  .cover{padding:74px 0 40px;text-align:center;background:radial-gradient(800px 420px at 50% -5%, rgba(108,92,231,.32), transparent 70%)}
   .cover .ek{font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--electric);margin-bottom:18px}
   .cover h1{font-size:clamp(64px,16vw,150px);line-height:.85;font-weight:800;letter-spacing:-4px}
   .cover .role{margin-top:18px;font-size:clamp(14px,2vw,18px);letter-spacing:2px;text-transform:uppercase;color:#cdccdf;font-weight:600}
-  .coverimg{max-width:560px;margin:34px auto 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;line-height:0}
-  .coverimg img{width:100%;height:auto;display:block}
+  .pf{width:150px;height:150px;border-radius:50%;margin:34px auto 0;background-size:cover;background-position:center;border:1px solid var(--line);box-shadow:0 10px 40px rgba(108,92,231,.25)}
+  .handle{display:inline-block;margin-top:16px;font-size:14px;font-weight:700;color:var(--electric);text-decoration:none}
 
   section{padding:54px 0;border-top:1px solid rgba(108,92,231,.1)}
   .k{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--electric);margin-bottom:18px}
@@ -29,24 +29,23 @@
   p.body{font-size:16.5px;line-height:1.7;color:#d6d5e6;max-width:680px}
   p.body+p.body{margin-top:14px}
 
-  .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
-  .cap{background:var(--charcoal);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-  .cap h3{font-size:17px;font-weight:700;margin-bottom:6px}
-  .cap p{font-size:13.5px;color:#cdccdf;line-height:1.55}
+  .themes{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .theme{font-size:13px;font-weight:700;letter-spacing:.5px;padding:9px 16px;border-radius:30px;background:var(--charcoal);border:1px solid var(--line);color:#cdccdf}
 
-  .quote{font-size:clamp(24px,4vw,38px);font-weight:800;line-height:1.25;letter-spacing:-.5px;max-width:760px}
-  .quote .em{color:var(--electric)}
+  .row{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .row .ph{width:160px;height:200px;border-radius:14px;background-size:cover;background-position:center;border:1px solid var(--line);flex:none}
+  .row .tx{flex:1;min-width:240px}
 
   .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-  .lk{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:30px;border:1px solid var(--line);font-size:13.5px;font-weight:700;text-decoration:none;color:var(--paper);transition:border-color .15s,background .15s}
-  .lk:hover{border-color:var(--electric);background:rgba(108,92,231,.1)}
+  .lk{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:30px;border:1px solid var(--line);font-size:13.5px;font-weight:700;text-decoration:none;color:var(--paper);background:var(--charcoal);transition:border-color .15s,transform .15s}
+  .lk:hover{border-color:var(--electric);transform:translateY(-1px)}
+  .lk.solid{background:var(--electric);color:#fff;border-color:var(--electric)}
   .contact{font-size:18px;font-weight:700}
   .contact a{color:var(--electric);text-decoration:none}
 
   footer{padding:48px 0 70px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
   footer .brand{font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--paper);font-size:14px}
   footer a{color:var(--electric);text-decoration:none}
-  @media(max-width:600px){.caps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -61,7 +60,8 @@
     <div class="ek">Electronic Press Kit</div>
     <h1>LUCA</h1>
     <div class="role">DJ + Immersive Experience Creator</div>
-    <div class="coverimg"><img src="assets/luca_hero.jpg" alt="LUCA"></div>
+    <div class="pf" style="background-image:url('assets/luca_hero.jpg')"></div>
+    <a class="handle" href="https://cravinadventure.github.io/client-case-study-luca-immersive-world/" target="_blank" rel="noopener">LUCA IMMERSIVE</a>
   </div>
 </header>
 
@@ -70,48 +70,53 @@
   <div class="wrap">
     <div class="k">About</div>
     <h2>The face of The Field.</h2>
-    <p class="body">LUCA is a DJ and immersive experience creator, and the character at the center of LUCA IMMERSIVE: a platform for multi-sensory live experiences, immersive installations, and a growing narrative world. The work blends visual storytelling, music, and interactive technology to transport audiences into new realities.</p>
-    <p class="body">The name means bringer of light, from the Latin lux and Greek leukós: the physical light of projection and LEDs, and the inner light of awareness. It is also the Last Universal Common Ancestor, the single root all life branches from, the same way every idea branches from The Field. In the story, LUCA is that light given a form, a guide who reveals imagination and hands it to the people in the room.</p>
+    <p class="body">LUCA is a DJ and immersive experience creator, and the character at the center of LUCA IMMERSIVE: a platform for multi-sensory live experiences, immersive installations, and a growing narrative world.</p>
+    <p class="body">The name means bringer of light, from the Latin <em>lux</em> and Greek <em>leukós</em>. It is also the Last Universal Common Ancestor, the single root all life branches from, the same way every idea branches from The Field. In the story, LUCA is that light given a form.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="k">What LUCA Creates</div>
+    <div class="k">The Work</div>
     <h2>Experiences, not just sets.</h2>
-    <div class="caps">
-      <div class="cap"><h3>Interactive light experiences</h3><p>The crowd's own light, captured live and turned into the visuals around them.</p></div>
-      <div class="cap"><h3>Live visuals &amp; projection</h3><p>Real-time effects and projection mapping built around the music.</p></div>
-      <div class="cap"><h3>Immersive DJ sets</h3><p>Sound and visuals as one reactive, evolving environment.</p></div>
-      <div class="cap"><h3>A narrative world</h3><p>The Field: an ongoing story audiences step inside, not just watch.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="k">Selected Work</div>
-    <h2>The interactive event.</h2>
-    <p class="body">A live experience where attendees used laser pointers and flashlights on their LUCA IMMERSIVE wristbands, fed through a GoPro into Resolume, and projection mapped onto the building in real time. Then the crowd took over and the night made itself.</p>
+    <p class="body">Immersive live experiences where the crowd's own light becomes the visuals. Real-time projection mapping, interactive tech, and DJ sets built as one reactive, evolving environment.</p>
     <div class="links">
-      <a class="lk" href="https://cravinadventure.github.io/client-case-study-luca-immersive/" target="_blank" rel="noopener">View the event &rarr;</a>
-      <a class="lk" href="https://cravinadventure.github.io/client-case-study-luca-immersive-character/" target="_blank" rel="noopener">Character design &rarr;</a>
-      <a class="lk" href="https://cravinadventure.github.io/client-case-study-luca-immersive-world/" target="_blank" rel="noopener">The Field &rarr;</a>
+      <a class="lk solid" href="https://cravinadventure.github.io/client-case-study-luca-immersive/" target="_blank" rel="noopener">The interactive event &rarr;</a>
+      <a class="lk" href="https://cravinadventure.github.io/luca-immersive-epk/" target="_blank" rel="noopener">Events press kit &rarr;</a>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="k">Philosophy</div>
-    <p class="quote">When you give people the tools to create, they don't just participate. <span class="em">They transform the space.</span></p>
+    <div class="k">The Look</div>
+    <div class="row">
+      <div class="ph" style="background-image:url('assets/luca_front.jpg')"></div>
+      <div class="tx">
+        <h2>All black, all signal.</h2>
+        <p class="body">Black techwear, chrome goggles, hood up. A character designed from every angle, down to the boots.</p>
+        <div class="links"><a class="lk" href="https://cravinadventure.github.io/client-case-study-luca-immersive-world/" target="_blank" rel="noopener">Character &amp; world &rarr;</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="k">Booking &amp; Contact</div>
-    <h2>Let's build something.</h2>
+    <div class="k">What He Does</div>
+    <div class="themes">
+      <span class="theme">Projection mapping</span>
+      <span class="theme">Live visuals</span>
+      <span class="theme">Interactive light</span>
+      <span class="theme">Immersive DJ sets</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="k">Booking</div>
+    <h2>Get in touch.</h2>
     <p class="contact"><a href="mailto:cravinadventure@gmail.com">cravinadventure@gmail.com</a></p>
   </div>
 </section>
